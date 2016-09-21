@@ -88,7 +88,7 @@ function validate_form( ) {
     } else {
         $input['size'] = '';
     }
-    if (! in_array($input['size'], ['small','medium','large'])) {
+    if (! in_array($input['size'], ['small','medium','large','xlarge'])) {
         $errors[] = 'Please select a size.';
     }
     // sweet is required
@@ -110,7 +110,7 @@ function validate_form( ) {
     if (! array_key_exists($input['drink'], $GLOBALS['drinks'])) {
         $errors[] = 'Please select a valid drink item.';
     }
-    
+
     // exactly two main dishes required
     if (isset($_POST['main_dish'])) {
         $input['main_dish'] = $_POST['main_dish'];
